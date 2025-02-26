@@ -1,0 +1,12 @@
+# Dependencies
+/node_modules
+
+# Generated files
+
+# Misc
+.DS_Store
+.env
+
+npm-debug.log*
+
+*.patch.tmp

@@ -1,0 +1,293 @@
+{
+  "seo": {
+    "title": "Telnyx - Global solutions for Communications, IOT, AI, Compute and Networking",
+    "description": "Your one-stop shop for infrastructure at the edge. The Telnyx Connectivity Cloud helps your business connect people, devices and applications everywhere.",
+    "ogImage": {
+      "src": "https://images.ctfassets.net/2vm221913gep/4lrCOXajiyjLqzTi0LN0bv/a19deab0d367e3f958dd7998f8186343/telnyx-home-page.jpg",
+      "alt": "Telnyx home page"
+    }
+  },
+  "hero": {
+    "tagline": "Global reach + Enterprise scale",
+    "heading": "Modular, resilient communications and connectivity",
+    "copy": "Telnyx provides a comprehensive suite of developer tools, web interfaces and cloud infrastructure to help you build and launch innovative, AI-centric communications and connectivity products anywhere around the world.",
+    "ctaButtons": [
+      {
+        "text": "Sign up",
+        "href": "/sign-up",
+        "type": "button"
+      },
+      {
+        "text": "Contact us",
+        "href": "/contact-us",
+        "type": "button",
+        "buttonKind": "secondary"
+      }
+    ],
+    "scrollSnap": true
+  },
+  "sections": {
+    "customerLogos": {
+      "spacingBottom": "continuous",
+      "logos": [
+        {
+          "src": "//images.ctfassets.net/2vm221913gep/5UfK0x3o7IOC2oYtsEJt17/f3ca083567cf080299ecdee9f39e502b/Customer-Logo-Homepage_Weave.svg",
+          "alt": "Weave"
+        },
+        {
+          "src": "//images.ctfassets.net/2vm221913gep/2qSMlcvGiZncoueT3l50kt/7f7edcb8e870c53d0c9ff192f285bfdf/Customer-Logo-Homepage_Cisco.svg",
+          "alt": "Cisco"
+        },
+        {
+          "src": "//images.ctfassets.net/2vm221913gep/7aR7nIAkT2AnKtI04lfmHx/dcff7f749577a949ec1c0408579011a7/Customer-Logo-Homepage_Red-Cross.svg",
+          "alt": "Red Cross"
+        },
+        {
+          "src": "//images.ctfassets.net/2vm221913gep/4u1D4u5oc7fhRuKC8D7pbq/041d0367ba5d32880d4e69443d24586e/Customer-Logo-Homepage_Talkdesk.svg",
+          "alt": "Talkdesk"
+        },
+        {
+          "src": "//images.ctfassets.net/2vm221913gep/2JRjC9CQmcZbEkNIgM2dQg/48855814e45739bd159e0022f16557ff/Customer-Logo-Homepage_Werkspot.svg",
+          "alt": "Werkspot"
+        },
+        {
+          "src": "//images.ctfassets.net/2vm221913gep/67hckVdHnS6JvDCWbawjNV/440d83cf4d18be7c542295d196189d01/Customer-Logo-Homepage_Phillips.svg",
+          "alt": "Phillips"
+        },
+        {
+          "src": "//images.ctfassets.net/2vm221913gep/38jMv1i1bRWqEbkVkmkNAJ/22ec2c172df61a7bdc635bb8a6b1602f/Customer-Logo-Homepage_LivePerson.svg",
+          "alt": "LivePerson"
+        },
+        {
+          "src": "//images.ctfassets.net/2vm221913gep/4aKpa4Zclh1U9nzsc28DKW/aa3fb3a8ae6a4872391077cb4f887aff/Customer-Logo-Homepage_Iterable.svg",
+          "alt": "Iterable"
+        },
+        {
+          "src": "//images.ctfassets.net/2vm221913gep/f84rLXnm8RKlloDjvXzdh/60486de84e2200415d60d9a4adaae96b/Customer-Logo-Homepage_Lightspeed.svg",
+          "alt": "Lightspeed"
+        },
+        {
+          "src": "//images.ctfassets.net/2vm221913gep/4a9rFhSe7WPRcIVltaPt0y/ccc26e2d1f397c37ad1df983cebcb9fc/Customer-Logo-Homepage_Call-Tracking-Metrics.svg",
+          "alt": "Call Tracking Metrics"
+        },
+        {
+          "src": "//images.ctfassets.net/2vm221913gep/4hy7NExXIjJ1kH9THSSPle/c039cf92e5922a66c41991cb7c19ca3a/Customer-Logo-Homepage_Article.svg",
+          "alt": "Article"
+        },
+        {
+          "src": "//images.ctfassets.net/2vm221913gep/QpsBjoX2HF9CU8fBL6b4W/c4f4a7e27005b2facebe41cc88c8fa87/Costar_Group.svg",
+          "alt": "CoStar Group"
+        }
+      ],
+      "scrollSnap": true
+    },
+    "products": {
+      "tagline": "Products",
+      "heading": "Manage every need from one platform",
+      "copy": "Telnyx has helped thousands of companies create connectivity solutions that help them connect with customers, collaborate with colleagues, and manage networks of devices.",
+      "cards": [
+        {
+          "id": "communication",
+          "heading": "Communications",
+          "copy": "Connect with customers and team members via voice or messaging by leveraging our carrier status and millions of local numbers available for purchase in 180 countries.",
+          "backgroundColor": "green",
+          "href": "/products#communications"
+        },
+        {
+          "id": "iot",
+          "heading": "IoT",
+          "copy": "Manage and configure IoT SIM cards over the air to securely connect IoT devices with flexible data coverage in 180+ countries.",
+          "backgroundColor": "citron",
+          "href": "/products#iot"
+        },
+        {
+          "id": "network",
+          "heading": "Networking",
+          "copy": "Create secure cloud connections via our private global IP network and 15+ fully-owned PoPs in major metro areas—all designed for fast, reliable routing at the edge.",
+          "backgroundColor": "blue",
+          "href": "/products#networking"
+        },
+        {
+          "id": "compute",
+          "heading": "Compute",
+          "copy": "Harness the power of AI in your internal tools and customer-facing applications for an enhanced CX and increased operational efficiency.",
+          "backgroundColor": "tan",
+          "href": "/products#compute"
+        }
+      ],
+      "scrollSnap": true
+    },
+    "useCases": {
+      "tagline": "Use cases",
+      "heading": "Get inspired",
+      "copy": "Learn what you can create with Telnyx.",
+      "images": [
+        {
+          "href": "/use-cases/contact-center",
+          "alt": "HP Use Cases Block Contact Center",
+          "label": "Contact centers",
+          "src": "https://images.ctfassets.net/2vm221913gep/6uAxlxD7SoygD8qtyPMqz1/e3618ef29d3c4b7e29cbf6d4b487ce5b/HP_Use-Cases-Block_Contact-center.jpg",
+          "mobileSrc": "https://images.ctfassets.net/2vm221913gep/7xrfC1sq0CYIxKE3vzXxif/1ee7a9275428f7fb90659271aedf1fa4/HP_Use-Cases-Block_Contact-center-MOBILE.jpg"
+        },
+        {
+          "href": "/use-cases/healthcare-iot",
+          "alt": "A square graphic depicting various healthcare-related icons such as a stethoscope, heart, medical cross, and pills.",
+          "label": "Patient monitoring",
+          "src": "https://images.ctfassets.net/2vm221913gep/2ZlFJdnREyLNJ7LU7mM0nd/ad8b0ecc9ee22c62a587eb6cc57376ca/Healthcare_Square.jpg",
+          "mobileSrc": "https://images.ctfassets.net/2vm221913gep/7eK2LheuKl9cjuXRADcwXc/a2d592e1b66869d9c2155bc992d0fb87/HP_Use-Cases-Block_Patient-monitoring-MOBILE.jpg"
+        },
+        {
+          "href": "/use-cases/sms-marketing",
+          "alt": "HP Use Cases Block Marketing Messaging",
+          "label": "Marketing messaging",
+          "src": "https://images.ctfassets.net/2vm221913gep/6UeMM9QsG46ZTznMGv6efH/adf5df867621970a0c5da13cafc7d52f/HP_Use-Cases-Block_Marketing-messaging.jpg",
+          "mobileSrc": "https://images.ctfassets.net/2vm221913gep/6ZbW2BEXHiYQAYDvqb8qkU/e6e00e9c21b28618445ca52419666cb2/HP_Use-Cases-Block_Marketing-messaging-MOBILE.jpg"
+        },
+        {
+          "href": "/use-cases/data-archiving",
+          "alt": "A diagram showing different use cases for data archiving in HP systems.",
+          "label": "Data archiving",
+          "src": "https://images.ctfassets.net/2vm221913gep/ZiUtSetuGOS0BioQvLCuH/7226c1d469b487d1bcbacd25118fde56/HP_Use-Cases-Block_Data-archiving.jpg",
+          "mobileSrc": "https://images.ctfassets.net/2vm221913gep/4z9H4alFRMinqHESbnHPjF/74a4078b09f5608491b220f507cbf5bd/HP_Use-Cases-Block_Data-archiving-MOBILE.jpg"
+        },
+        {
+          "href": "/use-cases/two-factor-authentication",
+          "alt": "A diagram showing two-factor identification authentication use cases for HP.",
+          "label": "Two-factor authentication",
+          "src": "https://images.ctfassets.net/2vm221913gep/1EvbkMbNunSXGNOdTL4mzC/42c8c90129408a9b7d60d17c18259af9/HP_Use-Cases-Block_Two-factor_identification_authentication.jpg",
+          "mobileSrc": "https://images.ctfassets.net/2vm221913gep/3l758D6ymimjcck3YtlUPx/a9313432a5ba4d18c0b4509b339da4e6/HP_Use-Cases-Block_2FA-MOBILE.jpg"
+        },
+        {
+          "href": "/use-cases/conversational-ai",
+          "alt": "A diagram showing various use cases for conversation AI technology.",
+          "label": "Conversational AI",
+          "src": "https://images.ctfassets.net/2vm221913gep/4ybsUHGTJGpNXwqXXr8Oet/bfa18282afe479e632109116eece96b7/HP_Use-Cases-Block_Conversation-AI.jpg",
+          "mobileSrc": "https://images.ctfassets.net/2vm221913gep/y311tQrq6hSYJeTUS96tZ/0aaa16b95fed36cadfda3e11fdd010a8/HP_Use-Cases-Block_Conversation-AI-MOBILE.jpg"
+        },
+        {
+          "href": "/use-cases/ai-and-machine-learning",
+          "alt": "A diagram showing various use cases for conversation AI technology.",
+          "label": "AI and machine learning",
+          "src": "https://images.ctfassets.net/2vm221913gep/2nKSGL0ftBka1Wr89Y1pst/4279e0561784c8a35f5090a6e4c4b26a/HP_Use-Cases-Block_AI-and-machine-learning.jpg",
+          "mobileSrc": "https://images.ctfassets.net/2vm221913gep/5hcin9P14BtEAtwumuVNjK/2342af91d4b594ecb3b031a093b5632a/HP_Use-Cases-Block_AI-and-machine-learning-MOBILE.jpg"
+        },
+        {
+          "href": "/use-cases/fleet-management",
+          "alt": "A diagram showing use cases for fleet management in HP software.",
+          "label": "Fleet management",
+          "src": "https://images.ctfassets.net/2vm221913gep/686IEpSYFlcZy0iYn6hXQt/f4a1a89bbc755d420193eb01579332be/HP_Use-Cases-Block_Fleet-management.jpg",
+          "mobileSrc": "https://images.ctfassets.net/2vm221913gep/4zKiWZNoMerHS3Wo8jeU3k/99824c36299b9b4f4d9782f9d46f86a8/HP_Use-Cases-Block_Fleet-management-MOBILE.jpg"
+        },
+        {
+          "href": "/use-cases/automated-appointment-reminders",
+          "alt": "A screenshot showing a block of appointment reminders in the HP Use Cases interface.",
+          "label": "Appointment reminder",
+          "src": "https://images.ctfassets.net/2vm221913gep/1IRw0mLuJoO8kfGAgdsHHC/33d83b746109f9261f9cc41925ecef4e/HP_Use-Cases-Block_Appointment-reminders.jpg",
+          "mobileSrc": "https://images.ctfassets.net/2vm221913gep/1Lvzhpj7yG89ZuWJDDXEqg/5abb84cd0ef27d5699f2456e3d1e0ae9/HP_Use-Cases-Block_Appointment-reminders-MOBILE.jpg"
+        },
+        {
+          "href": "/use-cases/call-tracking",
+          "alt": "A screenshot showing a block of appointment reminders in the HP Use Cases interface.",
+          "label": "Call tracking",
+          "src": "https://images.ctfassets.net/2vm221913gep/58ZQPSnKMQynr1WbrGyt7c/16d27fe63b2bc1434145b518797fbed9/HP_Use-Cases-Block_Call-tracking__1_.jpg",
+          "mobileSrc": "https://images.ctfassets.net/2vm221913gep/1dj3yFiLL8eMfEfhhyCHVk/f263e181f49dfd4bf829fa5744e8dcb9/HP_Use-Cases-Block_Call-tracking-MOBILE.jpg"
+        },
+        {
+          "href": "/use-cases/smart-agriculture",
+          "alt": "A smart agriculture use case block diagram showcasing various applications and technologies.",
+          "label": "Smart agriculture",
+          "src": "https://images.ctfassets.net/2vm221913gep/1Bt1qujGN01tobUNO3l9ce/9ec50dbb4afe0d62795d5752102595d2/HP_Use-Cases-Block_Smart-Agriculture.jpg",
+          "mobileSrc": "https://images.ctfassets.net/2vm221913gep/6ZFA6Yj8cOtMx7xesyRxQ2/5ef5b41d1e50eb4a1ecd9005c68cc2bd/HP_Use-Cases-Block_Fleet-management-MOBILE-1.jpg"
+        },
+        {
+          "href": "/use-cases/backup-and-restore",
+          "alt": "HP Use Cases Block Data Backup.",
+          "label": "Data backup",
+          "src": "https://images.ctfassets.net/2vm221913gep/2PRTl1EcbhiO5jgoHGh9ot/c50317703279e230d8a68735b7f8a76b/HP_Use-Cases-Block_Data-backup.jpg",
+          "mobileSrc": "https://images.ctfassets.net/2vm221913gep/14rhKRTcvK5x9K7uiir2Q3/c30eb2fe19b2e427f41feba413448dde/HP_Use-Cases-Block_Data-backup-MOBILE.jpg"
+        }
+      ],
+      "scrollSnap": true
+    },
+    "cta": {
+      "spacingTop": "continuous",
+      "tagline": "Sign up",
+      "heading": "Connect with us",
+      "copy": "Sign up for our marketing newsletter for new products and feature updates, tutorials, and events.",
+      "form": {
+        "ctaButton": {
+          "type": "button",
+          "text": "Submit",
+          "href": "/sign-up"
+        },
+        "input": {
+          "id": "email",
+          "name": "email",
+          "type": "email",
+          "placeholder": "Enter business email"
+        },
+        "footerCopy": "You can unsubscribe at any time. Read our [privacy policy](/privacy-policy) and [terms and conditions](/terms-and-conditions)."
+      },
+      "scrollSnap": true
+    },
+    "developerFocus": {
+      "backgroundColor": "tan",
+      "initialBackgroundColor": "cream",
+      "tagline": "DEVELOPER FOCUS",
+      "heading": "Revolutionize Communications and Connectivity with AI-Powered Innovation",
+      "copy": "Unlock the Future of Real-Time AI with Telnyx.",
+      "items": [
+        {
+          "id": "inference",
+          "heading": "Chat with an LLM",
+          "copy": "Utilize custom data in proprietary and open-source models, or build your own on dedicated GPU infrastructure for fast inference at low costs.",
+          "backgroundColor": "tan",
+          "isDark": false,
+          "center": false,
+          "cta": {
+            "text": "EXPLORE INFERENCE",
+            "href": "/products/inference"
+          },
+          "intersectionObserverThreshold": 1
+        },
+        {
+          "id": "voice-ai",
+          "heading": "The building blocks for Voice AI",
+          "copy": "Telnyx Conversational AI delivers on speed, quality, and knowledge, all from a single platform. Build cost-effective, low-latency Voice AI solutions on one provider.",
+          "backgroundColor": "green",
+          "isDark": false,
+          "center": true,
+          "cta": {
+            "text": "EXPLORE VOICE AI",
+            "href": "/voice-ai"
+          },
+          "intersectionObserverThreshold": 1
+        },
+        {
+          "id": "our-network",
+          "heading": "Explore our global, private network",
+          "backgroundColor": "blue",
+          "isDark": true,
+          "center": false,
+          "hasFilters": true,
+          "relative": true,
+          "intersectionObserverThreshold": 1
+        },
+        {
+          "id": "code",
+          "heading": "Built by developers, for developers",
+          "copy": "Telnyx is committed to putting builders in the driver’s seat. Use a platform developers love to access global communications and connectivity infrastructure through a suite of intuitive APIs. Leverage our developer docs and SDKs to get up and running quickly.",
+          "backgroundColor": "black",
+          "isDark": true,
+          "center": false,
+          "cta": {
+            "text": "EXPLORE OUR DOCS",
+            "href": "https://developers.telnyx.com/"
+          },
+          "intersectionObserverThreshold": 1
+        }
+      ],
+      "scrollSnap": true
+    }
+  }
+}

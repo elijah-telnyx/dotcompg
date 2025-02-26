@@ -1,0 +1,23 @@
+@Library("github.com/team-telnyx/infra-ci-pipelines@latest") _
+dockerImage {
+  build_dir = "packages/seti"
+  build_on_changes_to_these_path_prefixes = [
+    ".nvmrc",
+    "package.json",
+    "package-lock.json",
+    "packages/ui",
+    "packages/theme",
+    "packages/seti"
+  ]
+  build_stage_targets = [ "build", "build-prod"]
+  includedBranches = "main deploy-dev*"
+  image_additional_images = ["prod"]
+  service = "seti-oci"
+  channel = "#dotcom-jenkins"
+  vault_secrets = [
+    [
+      path: "dotcom-squad/seti",
+      secretValues: []
+    ]
+  ]
+}

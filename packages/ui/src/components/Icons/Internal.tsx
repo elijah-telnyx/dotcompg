@@ -1,0 +1,38 @@
+import { useId, type SVGProps } from 'react';
+
+type Props = { title?: string } & SVGProps<SVGSVGElement>;
+
+const Internal = ({ title, ...props }: Props) => {
+  const clipPathId = useId();
+
+  return (
+    <svg
+      width='20'
+      height='20'
+      viewBox='0 0 20 20'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      {...props}
+    >
+      {title && <title>{title}</title>}
+
+      <g clipPath={`url(#${clipPathId})`}>
+        <path
+          d='M1 9L-4.37114e-08 9L4.37114e-08 11L1 11L1 9ZM1 11L13 11L13 9L1 9L1 11Z'
+          fill='currentColor'
+        />
+        <path
+          d='M19.2111 9.10557C19.9482 9.4741 19.9482 10.5259 19.2111 10.8944L12.4472 14.2764C11.7823 14.6088 11 14.1253 11 13.382L11 6.61803C11 5.87465 11.7823 5.39116 12.4472 5.72361L19.2111 9.10557Z'
+          fill='currentColor'
+        />
+      </g>
+      <defs>
+        <clipPath id={clipPathId}>
+          <rect width='20' height='20' fill='white' />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+
+export default Internal;

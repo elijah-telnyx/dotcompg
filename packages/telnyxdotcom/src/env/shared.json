@@ -1,0 +1,137 @@
+{
+  "distDir": ".next",
+  "Bugsnag": {
+    "NEXT_PUBLIC_BUGSNAG_API_KEY": "d729f67758235e4e9296db7bd9cdf59d"
+  },
+  "contentful": {
+    "spaceId": "taysl255dolk",
+    "accessToken": "78IW1tQ7k1P4liabuwkNnXrPE_3x4QByQ_CCWfdZZQs"
+  },
+  "Marketo": {
+    "landingPageDomain": "go.telnyx.com",
+    "defaultMunchkinId": "028-JJW-728",
+    "forms": {
+      "contact-sales": {
+        "munchkinId": "028-JJW-728",
+        "formId": 1987
+      },
+      "resource-center-email-signup": {
+        "munchkinId": "028-JJW-728",
+        "formId": 1470
+      },
+      "signup": {
+        "munchkinId": "028-JJW-728",
+        "formId": 1897
+      },
+      "pricingCsv": {
+        "munchkinId": "028-JJW-728",
+        "formId": 1989
+      },
+      "pricingCalculator": {
+        "munchkinId": "028-JJW-728",
+        "formId": 2127
+      }
+    }
+  },
+  "neutrino": {
+    "BASE_URL": "https://neutrinoapi.net",
+    "errorCodes": {
+      "FREE_PLAN_LIMIT_EXCEEDED": 16
+    }
+  },
+  "langsLocalesCode": {
+    "Australia": {
+      "name": "Australia",
+      "alpha2": "au",
+      "code": "en-AU",
+      "currency": "AUD"
+    },
+    "default": {
+      "name": "United States",
+      "alpha2": "us",
+      "code": "en-US",
+      "currency": "USD"
+    },
+    "United Kingdom": {
+      "name": "United Kingdom",
+      "alpha2": "gb",
+      "code": "en-GB",
+      "currency": "GBP"
+    },
+    "Netherlands": {
+      "name": "Netherlands",
+      "alpha2": "nl",
+      "code": "nl-NL",
+      "currency": "EUR"
+    }
+  },
+  "signUp": {
+    "defaultPromoCode": "WELCOME10"
+  },
+  "telnyxCloudStorage": {
+    "buckets": {
+      "telnyxDotcomSubpoenas": "telnyx-dotcom-subpoenas"
+    }
+  },
+  "vwo": {
+    "account_id": "643783"
+  },
+  "voiceAi": {
+    "params": {
+      "application_id": "2526532936199570545",
+      "From": "+14582471830",
+      "Timeout": 60,
+      "TimeLimit": 300
+    }
+  },
+  "hCaptcha": {
+    "siteKey": {
+      "chatbot": "068ae9ba-0ea9-459f-8f77-a2788ffee70d",
+      "telnyxdotcom": "57d29a25-eb7d-458c-9e81-51d6efedfab6"
+    }
+  },
+  "cloudflareCache": {
+    "passphrase": "Clear Cloudflare Cache"
+  },
+  "strapi": {
+    "BASE_URL": "https://strapi.telnyx.tech/api"
+  },
+  "greenhouse": {
+    "BASE_URL": "https://boards-api.greenhouse.io/v1/boards/telnyx54/departments"
+  },
+  "sendgrid": {
+    "BASE_URL": "https://api.sendgrid.com/v3/marketing/contacts",
+    "subprocessorListUid": "ff1b2032-c011-46df-b19f-663474eb1c86",
+    "releaseNotesListUid": "710a7afc-b8d7-4f96-b116-b842741a1cb4"
+  },
+  "fallback": {
+    "default": "blocking",
+    "[slug]": false,
+    "pricing": false
+  },
+  "generatePagesFallback": {
+    "default": "blocking",
+    "useCases": "blocking",
+    "solutions": "blocking",
+    "learnAi": "blocking",
+    "resources": "blocking",
+    "releaseNotes": "blocking",
+    "products": "blocking",
+    "pricing": "blocking",
+    "phoneNumbers": "blocking",
+    "legal": "blocking",
+    "landing": "blocking",
+    "customerStories": "blocking",
+    "simCards": "blocking",
+    "no": false
+  },
+  "skipPathsGeneration": {
+    "pricing": ["iot-data-plans"]
+  },
+  "growthbook": {
+    "API_HOST": "https://cdn.growthbook.io",
+    "CLIENT_KEY": "sdk-HArS9ubEZ4Wp9qA",
+    "REVALIDATE_SECONDS": 1440,
+    "CACHE_TAG": "growthbook"
+  }
+}

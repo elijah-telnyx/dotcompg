@@ -1,0 +1,17 @@
+@Library("github.com/team-telnyx/infra-ci-pipelines@latest") _
+dockerImage {
+  build_dir = "packages/cache"
+  service = "telnyxdotcom-cache-monitor-oci"
+  channel = "#dotcom-jenkins"
+  vault_secrets = [
+    [
+      path: "dotcom-squad/telnyxdotcom-cache-monitor",
+      secretValues: [
+        [vaultKey: "CLOUDFLARE_API_KEY"],
+        [vaultKey: "CLOUDFLARE_ZONE_ID"],
+        [vaultKey: "PORTAL_API_V2_KEY"],
+        [vaultKey: "SLACK_OAUTH_TOKEN"],
+      ]
+    ]
+  ]
+}

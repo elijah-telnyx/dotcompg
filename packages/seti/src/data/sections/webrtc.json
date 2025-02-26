@@ -1,0 +1,26 @@
+{
+  "webrtc": {
+    "heading": "WebRTC",
+    "contentType": "sectionDashboard",
+    "code": "webrtc",
+    "items": [
+      {
+        "query": "avg(increase(success{job=\"tester-cloudprober\", probe=~\"bbtesting-webrtc.*\"}[10m]) / increase(total{job=\"tester-cloudprober\", probe=~\"bbtesting-webrtc.*\"}[10m])) * 100",
+        "id": "js_sdk_black_box_test",
+        "step": "20",
+        "chart": {
+          "heading": "JS SDK Black Box Test",
+          "copy": "Test Success Ratio",
+          "controls": {
+            "yAxis": {
+              "unit": "%"
+            },
+            "shape": "area",
+            "shapeNames": ["Success Rate"],
+            "tooltipSuffix": "%"
+          }
+        }
+      }
+    ]
+  }
+}

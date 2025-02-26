@@ -1,0 +1,14 @@
+import { A11ySVG, type A11ySVGProps } from './A11ySVG';
+
+const CloseIcon = (props: A11ySVGProps) => {
+  return (
+    <A11ySVG width='24' height='24' viewBox='0 0 24 24' {...props}>
+      <path
+        d='M17 4L20 7L16.1818 10.8182C15.5291 11.4709 15.5291 12.5291 16.1818 13.1818L20 17L17 20L13.1818 16.1818C12.5291 15.5291 11.4709 15.5291 10.8182 16.1818L6.99999 20L4 17L7.81818 13.1818C8.47088 12.5291 8.47087 11.4709 7.81818 10.8182L4.00003 7.00002L7.00002 4.00002L10.8182 7.81817C11.4709 8.47087 12.5291 8.47087 13.1818 7.81817L17 4Z'
+        fill='currentColor'
+      />
+    </A11ySVG>
+  );
+};
+
+export default CloseIcon;

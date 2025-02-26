@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.telnyx.ever_roam",
+      "sha256_cert_fingerprints": [
+        "64:38:74:DC:00:24:35:7D:4A:1B:CC:40:B3:77:51:BA:67:B0:5C:E7:AC:34:AC:C0:48:F4:8C:8C:52:95:CA:0F"
+      ]
+    }
+  }
+]

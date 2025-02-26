@@ -1,0 +1,1601 @@
+{
+    "messaging_overview": {
+        "heading": "Messaging API - Black Box Tests",
+        "code": "messaging_overview",
+        "items": [
+            {
+                "query": "sum(increase(messaging_blackbox_test_feature_total{job=\"messaging-blackbox-test\",feature=\"Outbound SMS\",status=\"passed\"}[10m]))/sum(increase(messaging_blackbox_test_feature_total{job=\"messaging-blackbox-test\",feature=\"Outbound SMS\"}[10m]))",
+                "id": "msg_overview_outbound_sms",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Outbound SMS",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "sum(increase(messaging_blackbox_test_feature_total{job=\"messaging-blackbox-test\",feature=\"Inbound SMS\",status=\"passed\"}[10m]))/sum(increase(messaging_blackbox_test_feature_total{job=\"messaging-blackbox-test\",feature=\"Inbound SMS\"}[10m]))",
+                "id": "msg_overview_inbound_sms",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Inbound SMS",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "sum(increase(messaging_blackbox_test_feature_total{job=\"messaging-blackbox-test\",feature=\"Outbound MMS\",status=\"passed\"}[10m]))/sum(increase(messaging_blackbox_test_feature_total{job=\"messaging-blackbox-test\",feature=\"Outbound MMS\"}[10m]))",
+                "id": "msg_overview_outbound_mms",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Outbound MMS",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "sum(increase(messaging_blackbox_test_feature_total{job=\"messaging-blackbox-test\",feature=\"Inbound MMS\",status=\"passed\"}[10m]))/sum(increase(messaging_blackbox_test_feature_total{job=\"messaging-blackbox-test\",feature=\"Inbound MMS\"}[10m]))",
+                "id": "msg_overview_inbound_mms",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Inbound MMS",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "voice_api_overview": {
+        "heading": "Voice API - Black Box Tests",
+        "code": "voice_api_overview",
+        "items": [
+            {
+                "query": "(sum(increase(telapps_black_box_scenarios_total{result=\"success\", region=\"us\", beta=\"false\", service_under_test=\"call-control\"}[5m])) OR on() vector(0)) / sum(increase(telapps_black_box_scenarios_total{beta=\"false\", region=\"us\", service_under_test=\"call-control\"}[5m]))",
+                "id": "voice_api_overview_call_control_us",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Programmable Voice - US",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "(sum(increase(telapps_black_box_scenarios_total{result=\"success\", region=\"eu\", beta=\"false\", service_under_test=\"call-control\"}[5m])) OR on() vector(0)) / sum(increase(telapps_black_box_scenarios_total{beta=\"false\", region=\"eu\", service_under_test=\"call-control\"}[5m]))",
+                "id": "voice_api_overview_call_control_eu",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Programmable Voice - EU",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "(sum(increase(telapps_black_box_scenarios_total{result=\"success\", region=\"us\", beta=\"false\", service_under_test=\"call-scripting\"}[5m])) OR on() vector(0)) / sum(increase(telapps_black_box_scenarios_total{beta=\"false\", region=\"us\", service_under_test=\"call-scripting\"}[5m]))",
+                "id": "voice_api_overview_texml_us",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "TeXML - US",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "(sum(increase(telapps_black_box_scenarios_total{result=\"success\", region=\"eu\", beta=\"false\", service_under_test=\"call-scripting\"}[5m])) OR on() vector(0)) / sum(increase(telapps_black_box_scenarios_total{beta=\"false\", region=\"eu\", service_under_test=\"call-scripting\"}[5m]))",
+                "id": "voice_api_overview_texml_eu",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "TeXML - EU",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "(sum(increase(telapps_black_box_scenarios_total{result=\"success\", region=\"us\", beta=\"false\", scenario_name=~\".*conference.*\"}[5m])) OR on() vector(0)) / sum(increase(telapps_black_box_scenarios_total{beta=\"false\", region=\"us\", scenario_name=~\".*conference.*\"}[5m]))",
+                "id": "voice_api_overview_conferences_us",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Conferences - US",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "(sum(increase(telapps_black_box_scenarios_total{result=\"success\", region=\"eu\", beta=\"false\", scenario_name=~\".*conference.*\"}[5m])) OR on() vector(0)) / sum(increase(telapps_black_box_scenarios_total{beta=\"false\", region=\"eu\", scenario_name=~\".*conference.*\"}[5m]))",
+                "id": "voice_api_overview_conferences_eu",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Conferences - EU",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "(sum(increase(telapps_black_box_scenarios_total{result=\"success\", region=\"us\", beta=\"false\", scenario_name=~\".*stream.*\"}[5m])) OR on() vector(0)) / sum(increase(telapps_black_box_scenarios_total{beta=\"false\", region=\"us\", scenario_name=~\".*stream.*\"}[5m]))",
+                "id": "voice_api_overview_media_streaming_us",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Media Streaming - US",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "(sum(increase(telapps_black_box_scenarios_total{result=\"success\", region=\"eu\", beta=\"false\", scenario_name=~\".*stream.*\"}[5m])) OR on() vector(0)) / sum(increase(telapps_black_box_scenarios_total{beta=\"false\", region=\"eu\", scenario_name=~\".*stream.*\"}[5m]))",
+                "id": "voice_api_overview_media_streaming_eu",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Media Streaming - EU",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "sip_trunking_mos_overview": {
+        "heading": "SIP Trunking - Mean Opinion Score",
+        "code": "sip_trunking_mos_overview",
+        "items": [
+            {
+                "query": "avg(inbound_mos_sample_average{node_site=~\"nj1|fl1\"} > 0)",
+                "id": "sip_trunking_mos_ashburn",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Ashburn, VA",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "mappings": [
+                            {
+                                "range": [
+                                    4,
+                                    5
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    3.5,
+                                    3.9999
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    3.4999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "avg(inbound_mos_sample_average{node_site=~\"at1|da1|mn1\"} > 0)",
+                "id": "sip_trunking_mos_chicago",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Chicago, IL",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "mappings": [
+                            {
+                                "range": [
+                                    4,
+                                    5
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    3.5,
+                                    3.9999
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    3.4999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "avg(inbound_mos_sample_average{node_site=~\"de1|lv1\"} > 0)",
+                "id": "sip_trunking_mos_san_jose",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "San Jose, CA",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "mappings": [
+                            {
+                                "range": [
+                                    4,
+                                    5
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    3.5,
+                                    3.9999
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    3.4999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "avg(inbound_mos_sample_average{node_site=~\"mt1|tr1\"} > 0)",
+                "id": "sip_trunking_mos_toronto",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Toronto, Canada",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "mappings": [
+                            {
+                                "range": [
+                                    4,
+                                    5
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    3.5,
+                                    3.9999
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    3.4999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "avg(inbound_mos_sample_average{node_site=~\"ld6\"} > 0)",
+                "id": "sip_trunking_mos_london",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "London, UK",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "mappings": [
+                            {
+                                "range": [
+                                    4,
+                                    5
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    3.5,
+                                    3.9999
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    3.4999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "avg(inbound_mos_sample_average{node_site=~\"am3\"} > 0)",
+                "id": "sip_trunking_mos_amsterdam",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Amsterdam, Netherlands",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "mappings": [
+                            {
+                                "range": [
+                                    4,
+                                    5
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    3.5,
+                                    3.9999
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    3.4999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "avg(inbound_mos_sample_average{node_site=~\"fr5\"} > 0)",
+                "id": "sip_trunking_mos_frankfurt",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Frankfurt, Germany",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "mappings": [
+                            {
+                                "range": [
+                                    4,
+                                    5
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    3.5,
+                                    3.9999
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    3.4999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "avg(inbound_mos_sample_average{node_site=~\"sy1\"} > 0)",
+                "id": "sip_trunking_mos_sydney",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Sydney, Australia",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "mappings": [
+                            {
+                                "range": [
+                                    4,
+                                    5
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    3.5,
+                                    3.9999
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    3.4999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "avg(inbound_mos_sample_average{node_site=~\"cn1\"} > 0)",
+                "id": "sip_trunking_mos_chennai",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Chennai, India",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "mappings": [
+                            {
+                                "range": [
+                                    4,
+                                    5
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    3.5,
+                                    3.9999
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    3.4999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "numbers_overview": {
+        "heading": "Numbers API - Black Box Tests",
+        "code": "numbers_overview",
+        "items": [
+            {
+                "query": "sum(increase(airflow_blackbox_inventory_success_count{collection_name=\"order_US_local_workflow\",consul_datacenter=\"ch1b-prod\"}[20m])) / (sum(increase(airflow_blackbox_inventory_success_count{collection_name=\"order_US_local_workflow\",consul_datacenter=\"ch1b-prod\"}[20m])) + sum(increase(airflow_blackbox_inventory_failure_count{collection_name=\"order_US_local_workflow\",consul_datacenter=\"ch1b-prod\"}[20m])))",
+                "id": "numbers_overview_us_orders",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Orders - US",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "(count_over_time((airflow_blackbox_inventory_response_quantity{collection_name=\"available_phone_numbers/country\", country=\"US\"} > 0)[5m:]) or on() vector(0)) / count_over_time(airflow_blackbox_inventory_response_quantity{collection_name=\"available_phone_numbers/country\", country=\"US\"}[5m:])",
+                "id": "numbers_overview_us_search",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Search - US",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "mission_control_overview": {
+        "heading": "Mission Control API - Black Box Tests",
+        "code": "mission_control_overview",
+        "items": [
+            {
+                "query": "avg(avg_over_time(runscope_assertion_success_ratio{test_name = \"[CRITICAL] MCP Bulk Operations Endpoint - Multi Location\"}[5m]))",
+                "id": "mission_control_overview_bulk_ops",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Bulk Operations",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "avg(avg_over_time(runscope_assertion_success_ratio{test_name = \"[CRITICAL] MCP Connection Endpoint - Multi Location\"}[5m]))",
+                "id": "mission_control_overview_connection_updates",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Connection Updates",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "avg(avg_over_time(runscope_assertion_success_ratio{test_name = \"[CRITICAL] MCP Sessions endpoints - Multi Location\"}[5m]))",
+                "id": "mission_control_overview_sessions",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Portal Login",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "cloud_storage_overview": {
+        "heading": "Cloud Storage API - Black Box Tests",
+        "code": "cloud_storage_overview",
+        "items": [
+            {
+                "query": "(sum(increase(s3bibi_flow_events_total{status=\"success\", dc=\"de1\", service_name=\"public.iface\"}[60m])) /  sum(increase(s3bibi_flow_events_total{dc=\"de1\", service_name=\"public.iface\"}[60m])))",
+                "id": "flow_runs_de1",
+                "step": "60",
+                "stat": "avg",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "chart": {
+                    "heading": "us-west-1",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "(sum(increase(s3bibi_flow_events_total{status=\"success\", dc=\"fl1\", service_name=\"public.iface\"}[60m])) /  sum(increase(s3bibi_flow_events_total{dc=\"fl1\", service_name=\"public.iface\"}[60m])))",
+                "id": "flow_runs_fl1",
+                "step": "60",
+                "stat": "avg",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "chart": {
+                    "heading": "us-east-1",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "(sum(increase(s3bibi_flow_events_total{status=\"success\", dc=\"mn1\", service_name=\"public.iface\"}[60m])) /  sum(increase(s3bibi_flow_events_total{dc=\"mn1\", service_name=\"public.iface\"}[60m])))",
+                "id": "flow_runs_mn1",
+                "step": "60",
+                "stat": "avg",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "chart": {
+                    "heading": "us-central-1",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "fax_overview": {
+        "heading": "Fax API - Black Box Tests",
+        "code": "fax_overview",
+        "items": [
+            {
+                "query": "(sum(increase(telapps_black_box_scenarios_total{result=\"success\", region=\"us\", beta=\"false\", service_under_test=\"faxes\"}[5m])) OR on() vector(0)) / sum(increase(telapps_black_box_scenarios_total{beta=\"false\", region=\"us\", service_under_test=\"faxes\"}[5m]))",
+                "id": "fax_overview_us",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Fax - US",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "(sum(increase(telapps_black_box_scenarios_total{result=\"success\", region=\"eu\", beta=\"false\", service_under_test=\"faxes\"}[5m])) OR on() vector(0)) / sum(increase(telapps_black_box_scenarios_total{beta=\"false\", region=\"eu\", service_under_test=\"faxes\"}[5m]))",
+                "id": "fax_overview_eu",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Fax - EU",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "porting_overview": {
+        "heading": "Porting API - Black Box Tests",
+        "code": "porting_overview",
+        "items": [
+            {
+                "query": "(sum(increase(porting_black_box_scenarios_total{result=\"success\", scenario_id=~\"post_porting_orders_fast_port_eligible|post_porting_orders_fast_port_mix|post_porting_orders_non_fast_port_eligible|post_porting_orders_us_and_ireland\"}[10m])) OR on() vector(0)) / sum(increase(porting_black_box_scenarios_total{scenario_id=~\"post_porting_orders_fast_port_eligible|post_porting_orders_fast_port_mix|post_porting_orders_non_fast_port_eligible|post_porting_orders_us_and_ireland\"}[10m]))",
+                "id": "porting_overview_create_port",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Create Orders",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "(sum(increase(porting_black_box_scenarios_total{result=\"success\", scenario_id=\"update_porting_orders_with_valid_params\"}[10m])) OR on() vector(0)) / sum(increase(porting_black_box_scenarios_total{scenario_id=\"update_porting_orders_with_valid_params\"}[10m]))",
+                "id": "porting_overview_update_port",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Update Orders",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "(sum(increase(porting_black_box_scenarios_total{result=\"success\", scenario_id=~\"create_document_from_base64|create_document_from_url\"}[10m])) OR on() vector(0)) / sum(increase(porting_black_box_scenarios_total{scenario_id=~\"create_document_from_base64|create_document_from_url\"}[10m]))",
+                "id": "porting_overview_create_documents",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Create Documents",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "(sum(increase(porting_black_box_scenarios_total{result=\"success\", scenario_id=~\"list_requirements|list_requirement_types\"}[10m])) OR on() vector(0)) / sum(increase(porting_black_box_scenarios_total{scenario_id=~\"list_requirements|list_requirement_types\"}[10m]))",
+                "id": "porting_overview_list_requirements",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "List Requirements",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "inference_overview": {
+        "heading": "Inference API - Black Box Tests",
+        "code": "inference_overview",
+        "items": [
+            {
+                "query": "sum(increase(airflow_chat_completion_generate_success_count{collection_name=\"chat_completion_generate\", model_name=\"meta-llama/Meta-Llama-3.1-70B-Instruct\"}[15m]))/(sum(increase(airflow_chat_completion_generate_success_count{collection_name=\"chat_completion_generate\", model_name=\"meta-llama/Meta-Llama-3.1-70B-Instruct\"}[15m])) + sum(increase(airflow_chat_completion_generate_failure_count{collection_name=\"chat_completion_generate\", model_name=\"meta-llama/Meta-Llama-3.1-70B-Instruct\"}[15m])))",
+                "id": "inference_overview_llama_70B",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Llama 3.1 70B",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "query": "sum(increase(airflow_chat_completion_generate_success_count{collection_name=\"chat_completion_generate\", model_name=\"meta-llama/Meta-Llama-3.1-8B-Instruct\"}[15m]))/(sum(increase(airflow_chat_completion_generate_success_count{collection_name=\"chat_completion_generate\", model_name=\"meta-llama/Meta-Llama-3.1-8B-Instruct\"}[15m])) + sum(increase(airflow_chat_completion_generate_failure_count{collection_name=\"chat_completion_generate\", model_name=\"meta-llama/Meta-Llama-3.1-8B-Instruct\"}[15m])))",
+                "id": "inference_overview_llama_8B",
+                "grid": {
+                    "xs": 2,
+                    "small": 2,
+                    "medium": 3
+                },
+                "step": "60",
+                "stat": "avg",
+                "chart": {
+                    "heading": "Llama 3.1 8B",
+                    "size": "small",
+                    "controls": {
+                        "shape": "absolute",
+                        "suffix": "%",
+                        "mappings": [
+                            {
+                                "range": [
+                                    0.95,
+                                    1
+                                ],
+                                "color": "green"
+                            },
+                            {
+                                "range": [
+                                    0.9,
+                                    0.9499
+                                ],
+                                "color": "citron"
+                            },
+                            {
+                                "range": [
+                                    0,
+                                    0.8999
+                                ],
+                                "color": "red"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

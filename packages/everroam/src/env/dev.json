@@ -1,0 +1,27 @@
+{
+  "env": "dev",
+  "protocol": "http",
+  "host": "localhost:3000",
+  "revalidate": 60,
+  "cache": {
+    "lifetime": 1,
+    "directory": ".cache"
+  },
+  "api": {
+    "BASE_URL": "https://apidev.telnyx.com",
+    "NODE_FETCH_HOST_URL": "wwwdev.telnyx.com"
+  },
+  "PORTAL": {
+    "BASE_URL": "https://portaldev.telnyx.com/#"
+  },
+  "generatePagesFallback": {
+    "default": "blocking",
+    "blog": "blocking",
+    "no": false
+  },
+  "google": {
+    "sheets": {
+      "signup": "1xQ0i-xIZavyM030riLTb80krpQj5KwFVy-PGLYAkZ8Q"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+# http://engineering-decision-records.query.dev.telnyx.io:35730/en/architecture/adr-0008.html
+names:
+  service: everroam-oci
+  github: telnyxdotcom-monorepo
+
+project:
+  squad: dotcom.squad
+  primary_maintainer: nicksc
+  secondary_maintainer: lucas
+  public_api: false
+  private_api: false
+
+build:
+  allow_vulnerable_image: true
+  use_vault_ha: true

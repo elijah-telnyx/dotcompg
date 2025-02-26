@@ -1,0 +1,15 @@
+{
+  "extends": ["@telnyxdotcom/eslint-config", "next/core-web-vitals"],
+  "plugins": ["testing-library"],
+  "overrides": [
+    // Only uses Testing Library lint rules in test files
+    {
+      "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ],
+  "rules": {
+    "@next/next/google-font-display": "off",
+    "@next/next/google-font-preconnect": "off"
+  }
+}

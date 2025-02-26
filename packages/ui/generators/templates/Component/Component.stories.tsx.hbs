@@ -1,0 +1,31 @@
+import { within } from '@storybook/testing-library';
+import { expect } from '@storybook/jest';
+import type { Meta, StoryObj } from '@storybook/react';
+import {{pascalCase name}}, { type {{pascalCase name}}Props } from './{{pascalCase name}}';
+
+const Main: Meta<{{pascalCase name}}Props> = {
+  title: 'Components/{{pascalCase name}}',
+  component: {{pascalCase name}},
+  args: {
+    children: 'This will be used in all stories, unless overwritten',
+  },
+  parameters: {
+    layout: 'fullscreen',
+  },
+};
+
+export default Main;
+
+type story = StoryObj<{{pascalCase name}}Props>;
+
+export const Default: story = {};
+
+export const WithContent: story = {
+  args: {
+    children: 'This is the content',
+  },
+  play: async ({ canvasElement }) => {
+    const { getByText } = within(canvasElement);
+    await expect(getByText('This is the content')).toBeInTheDocument();
+  },
+};

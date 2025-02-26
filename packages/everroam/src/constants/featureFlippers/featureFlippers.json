@@ -1,0 +1,32 @@
+{
+  "DOTCOM_2583_HOME_HERO_FLOW": {
+    "production": true,
+    "staging": true,
+    "dev": true
+  },
+  "DOTCOM_2756_PIPEDATA": {
+    "production": false,
+    "staging": true,
+    "dev": true
+  },
+  "DOTCOM_3328_VOICE_AI_HACAPTCHA": {
+    "production": false,
+    "staging": true,
+    "dev": true
+  },
+  "DOTCOM_2398_VERSIONED_TERMS_AND_CONDITIONS": {
+    "production": true,
+    "staging": true,
+    "dev": true
+  },
+  "DOTCOM_2431_NEW_OUTBOUND_PRICE_API": {
+    "production": false,
+    "staging": false,
+    "dev": false
+  },
+  "DOTCOM_3518_HOMEPAGE_SCROLL_SNAP_INTERACTIVE": {
+    "production": true,
+    "staging": true,
+    "dev": true
+  }
+}

@@ -1,0 +1,12 @@
+import type { ReactNode } from 'react';
+import * as css from './{{pascalCase name}}.styled';
+
+export interface {{pascalCase name}}Props {
+  children?: ReactNode;
+}
+
+const {{pascalCase name}} = ({ children = '{{pascalCase name}}' }: {{pascalCase name}}Props) => {
+  return <css.Wrapper>{children}</css.Wrapper>;
+};
+
+export default {{pascalCase name}};

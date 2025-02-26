@@ -1,0 +1,29 @@
+@Library("github.com/team-telnyx/infra-ci-pipelines@latest") _
+properties([
+  pipelineTriggers([
+    cron("0 12 * * *")
+  ]),
+])
+ciPipeline {
+  build_dir = "packages/e2e"
+  service = "telnyxdotcom-e2e"
+  channel = "#dotcom-jenkins"
+  vault_secrets = [
+    [
+      path: "dotcom-squad/telnyxdotcom-e2e",
+      secretValues: [
+        [vaultKey: "PORT"],
+        [vaultKey: "NODE_ENV"],
+        [vaultKey: "RUNTIME_ENV"],
+        [vaultKey: "E2E_TEST_TIMEOUT"],
+        [vaultKey: "E2E_PLAYWRIGHT_WORKERS"],
+        [vaultKey: "E2E_PLAYWRIGHT_RETRIES"],
+        [vaultKey: "E2E_AJS_ANONYMOUS_ID"],
+        [vaultKey: "E2E_AJS_USER_ID"],
+        [vaultKey: "E2E_GOOGLE_USER_EMAIL"],
+        [vaultKey: "E2E_GOOGLE_USER_PASSWORD"],
+        [vaultKey: "E2E_PORTAL_V2_API_KEY_PROD"]
+      ]
+    ]
+  ]
+}

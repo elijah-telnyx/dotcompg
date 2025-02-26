@@ -1,0 +1,179 @@
+{
+  "cloud_storage_flow_runs": {
+    "ratio": true,
+    "heading": "Blackbox Tests - Workflow with mixed API requests",
+    "code": "cloud_storage_flow_runs",
+    "items": [
+      {
+        "query": "sum(s3bibi_flow_events_total{ region=\"us-central-1\", is_public=\"true\", status=\"success\" }) by (status,dc)",
+        "id": "flow_runs_da1",
+        "step": "30",
+        "chart": {
+          "heading": "us-central-1",
+          "copy": "Success rate of test runs in us-central-1",
+          "controls": {
+            "shape": "bar",
+            "shapeNames": ["Successful test runs", "Failed test runs"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      },
+      {
+        "query": "sum(s3bibi_flow_events_total{ region=\"us-central-1\", is_public=\"true\", status=\"fail\" }) by (status,dc)",
+        "id": "flow_runs_da1",
+        "step": "30",
+        "chart": {
+          "heading": "us-central-1",
+          "copy": "Success rate of test runs in us-central-1",
+          "controls": {
+            "shape": "bar",
+            "shapeNames": ["Successful test runs", "Failed test runs"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      },
+      {
+        "query": "sum(s3bibi_flow_events_total{ region=\"us-west-1\", is_public=\"true\", status=\"success\" }) by (status,dc)",
+        "id": "flow_runs_de1",
+        "step": "30",
+        "chart": {
+          "heading": "us-west-1",
+          "copy": "Success rate of test runs in us-west-1",
+          "controls": {
+            "shape": "bar",
+            "shapeNames": ["Successful test runs", "Failed test runs"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      },
+      {
+        "query": "sum(s3bibi_flow_events_total{ region=\"us-west-1\", is_public=\"true\", status=\"fail\" }) by (status,dc)",
+        "id": "flow_runs_de1",
+        "step": "30",
+        "chart": {
+          "heading": "us-west-1",
+          "copy": "Success rate of test runs in us-west-1",
+          "controls": {
+            "shape": "bar",
+            "shapeNames": ["Successful test runs", "Failed test runs"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      },
+      {
+        "query": "sum(s3bibi_flow_events_total{ region=\"us-east-1\", is_public=\"true\", status=\"success\" }) by (status,dc)",
+        "id": "flow_runs_fl1",
+        "step": "30",
+        "chart": {
+          "heading": "us-east-1",
+          "copy": "Success rate of test runs in us-east-1",
+          "controls": {
+            "shape": "bar",
+            "shapeNames": ["Successful test runs", "Failed test runs"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      },
+      {
+        "query": "sum(s3bibi_flow_events_total{ region=\"us-east-1\", is_public=\"true\", status=\"fail\" }) by (status,dc)",
+        "id": "flow_runs_fl1",
+        "step": "30",
+        "chart": {
+          "heading": "us-east-1",
+          "copy": "Success rate of test runs in us-east-1",
+          "controls": {
+            "shape": "bar",
+            "shapeNames": ["Successful test runs", "Failed test runs"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      }
+    ]
+  },
+  "cloud_storage_success_rate": {
+    "heading": "Blackbox Tests - Success Rate",
+    "code": "cloud_storage_success_rate",
+    "items": [
+      {
+        "query": "(sum(increase(s3bibi_flow_events_total{status=\"success\", dc=\"da1\", service_name=\"public.iface\"}[60m])) /  sum(increase(s3bibi_flow_events_total{dc=\"da1\", service_name=\"public.iface\"}[60m])))",
+        "id": "flow_runs_da1",
+        "step": "60",
+        "stat": "avg",
+        "grid": {
+          "xs": 2,
+          "small": 2,
+          "medium": 3
+        },
+        "chart": {
+          "heading": "Success Rate - da1",
+          "copy": "public.iface - da1",
+          "size": "small",
+          "controls": {
+            "shape": "absolute",
+            "suffix": "%"
+          }
+        }
+      },
+      {
+        "query": "(sum(increase(s3bibi_flow_events_total{status=\"success\", dc=\"de1\", service_name=\"public.iface\"}[60m])) /  sum(increase(s3bibi_flow_events_total{dc=\"de1\", service_name=\"public.iface\"}[60m])))",
+        "id": "flow_runs_de1",
+        "step": "60",
+        "stat": "avg",
+        "grid": {
+          "xs": 2,
+          "small": 2,
+          "medium": 3
+        },
+        "chart": {
+          "heading": "Success Rate - de1",
+          "copy": "public.iface - de1",
+          "size": "small",
+          "controls": {
+            "shape": "absolute",
+            "suffix": "%"
+          }
+        }
+      },
+      {
+        "query": "(sum(increase(s3bibi_flow_events_total{status=\"success\", dc=\"fl1\", service_name=\"public.iface\"}[60m])) /  sum(increase(s3bibi_flow_events_total{dc=\"fl1\", service_name=\"public.iface\"}[60m])))",
+        "id": "flow_runs_fl1",
+        "step": "60",
+        "stat": "avg",
+        "grid": {
+          "xs": 2,
+          "small": 2,
+          "medium": 3
+        },
+        "chart": {
+          "heading": "Success Rate - fl1",
+          "copy": "public.iface - fl1",
+          "size": "small",
+          "controls": {
+            "shape": "absolute",
+            "suffix": "%"
+          }
+        }
+      },
+      {
+        "query": "(sum(increase(s3bibi_flow_events_total{status=\"success\", dc=\"mn1\", service_name=\"public.iface\"}[60m])) /  sum(increase(s3bibi_flow_events_total{dc=\"mn1\", service_name=\"public.iface\"}[60m])))",
+        "id": "flow_runs_mn1",
+        "step": "60",
+        "stat": "avg",
+        "grid": {
+          "xs": 2,
+          "small": 2,
+          "medium": 3
+        },
+        "chart": {
+          "heading": "Success Rate - mn1",
+          "copy": "public.iface - mn1",
+          "size": "small",
+          "controls": {
+            "shape": "absolute",
+            "suffix": "%"
+          }
+        }
+      }
+    ]
+  }
+}

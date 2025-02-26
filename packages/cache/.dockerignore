@@ -1,0 +1,14 @@
+node_modules
+.DS_Store
+.git
+.gitignore
+.sass-cache
+.tmp
+Dockerfile*
+Makefile
+docker-compose.yml
+log
+npm-debug.log
+tmp
+*.log
+.env*

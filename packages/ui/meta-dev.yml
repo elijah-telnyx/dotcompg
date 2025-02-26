@@ -1,0 +1,44 @@
+names:
+  service: telnyxdotcom-ui
+  upsource: telnyxdotcom-ui
+  github: telnyxdotcom-monorepo
+  bugsnag: telnyxdotcom
+project:
+  squad: dotcom.squad
+  primary_maintainer: lucas
+  secondary_maintainer: douglas
+  service_type: backend
+  public_api: false
+  private_api: false
+  dependencies:
+    - api_gateway
+    - sendgrid
+
+build:
+  allow_secret_plaintext: true
+  allow_vulnerable_image: true
+  use_vault_ha: true
+
+deploy:
+  k8s_clusters: ['backend-ch1-dev']
+  service:
+    - name: 'telnyxdotcom-ui'
+      port: 6891
+      tags: ['frontend', 'website']
+      check:
+        type: http
+        path: /
+      ready:
+        type: http
+        path: /
+        interval: 30s
+        timeout: 120s
+  cpu: 25
+  memory: 130
+  cpu_limit: 320
+  memory_limit: 280
+  instances: 2
+  env:
+    static:
+      PORT: '6891'
+      NODE_ENV: 'production'

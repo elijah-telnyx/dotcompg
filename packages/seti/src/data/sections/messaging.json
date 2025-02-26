@@ -1,0 +1,203 @@
+{
+  "messaging_outbound": {
+    "heading": "Outbound queue",
+    "code": "messaging_outbound",
+    "items": [
+      {
+        "query": "sum(rate(messaging_outbound_gauge_term_scheduler_messages{app=\"messaging-outbound\"}[1m])) by (consul_datacenter)",
+        "id": "outbound_termination_scheduler",
+        "chart": {
+          "heading": "Outbound Termination Scheduler",
+          "controls": {
+            "shape": "line",
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      }
+    ]
+  },
+  "messaging_deliverability_general": {
+    "heading": "Deliverability general",
+    "code": "messaging_deliverability_general",
+    "items": [
+      {
+        "query": "sum(rate(messaging_vendor_deliverability_counter_total{job=\"messaging-cron\", direction=\"outbound\"}[5m])) by (status) > 0",
+        "id": "messaging_deliverability_general_outbound",
+        "chart": {
+          "heading": "Outbound Deliverability",
+          "controls": {
+            "shape": "bar",
+            "tooltipSuffix": "msg/s"
+          }
+        }
+      },
+      {
+        "query": "sum(rate(messaging_vendor_deliverability_counter_total{job=\"messaging-cron\", direction=\"inbound\"}[5m])) by (status) > 0",
+        "id": "messaging_deliverability_general_inbound",
+        "chart": {
+          "heading": "Inbound Deliverability",
+          "controls": {
+            "shape": "bar",
+            "tooltipSuffix": "msg/s"
+          }
+        }
+      }
+    ]
+  },
+  "messaging_deliverability_total_messages": {
+    "heading": "Deliverability total messages",
+    "code": "messaging_deliverability_total_messages",
+    "items": [
+      {
+        "query": "sum(increase(messaging_updates_counter_msgterm_total{app=\"messaging-updates\"}[1m])) by (e_status)",
+        "id": "messaging_deliverability_total_messages",
+        "chart": {
+          "heading": "Deliverability total messages",
+          "controls": {
+            "shape": "area"
+          }
+        }
+      }
+    ]
+  },
+  "messaging_blackbox": {
+    "heading": "Blackbox testing",
+    "code": "messaging_blackbox",
+    "collapsed": true,
+    "ratio": true,
+    "items": [
+      {
+        "query": "sum(messaging_blackbox_test_steps_passed{job=\"messaging-blackbox-test\", feature=\"Inbound MMS\"})",
+        "id": "messaging_blackbox_inbound_mms",
+        "chart": {
+          "heading": "Blackbox Inbound MMS",
+          "controls": {
+            "shape": "bar",
+            "tooltipSuffix": "msg/s"
+          }
+        }
+      },
+      {
+        "query": "sum(messaging_blackbox_test_steps_failed{job=\"messaging-blackbox-test\", feature=\"Inbound MMS\"})",
+        "id": "messaging_blackbox_inbound_mms",
+        "chart": {
+          "heading": "Blackbox Inbound MMS",
+          "controls": {
+            "shape": "bar",
+            "tooltipSuffix": "msg/s"
+          }
+        }
+      },
+      {
+        "query": "sum(messaging_blackbox_test_steps_passed{job=\"messaging-blackbox-test\", feature=\"Inbound SMS\"})",
+        "id": "messaging_blackbox_inbound_sms",
+        "chart": {
+          "heading": "Blackbox Inbound SMS",
+          "controls": {
+            "shape": "bar",
+            "tooltipSuffix": "msg/s"
+          }
+        }
+      },
+      {
+        "query": "sum(messaging_blackbox_test_steps_failed{job=\"messaging-blackbox-test\", feature=\"Inbound SMS\"})",
+        "id": "messaging_blackbox_inbound_sms",
+        "chart": {
+          "heading": "Blackbox Inbound SMS",
+          "controls": {
+            "shape": "bar",
+            "tooltipSuffix": "msg/s"
+          }
+        }
+      },
+      {
+        "query": "sum(messaging_blackbox_test_steps_passed{job=\"messaging-blackbox-test\", feature=\"Messaging profiles\"})",
+        "id": "messaging_blackbox_messaging_profiles",
+        "chart": {
+          "heading": "Blackbox Messaging Profiles",
+          "controls": {
+            "shape": "bar",
+            "tooltipSuffix": "msg/s"
+          }
+        }
+      },
+      {
+        "query": "sum(messaging_blackbox_test_steps_failed{job=\"messaging-blackbox-test\", feature=\"Messaging profiles\"})",
+        "id": "messaging_blackbox_messaging_profiles",
+        "chart": {
+          "heading": "Blackbox Messaging Profiles",
+          "controls": {
+            "shape": "bar",
+            "tooltipSuffix": "msg/s"
+          }
+        }
+      },
+      {
+        "query": "sum(messaging_blackbox_test_steps_passed{job=\"messaging-blackbox-test\", feature=\"Outbound MMS\"})",
+        "id": "messaging_blackbox_outbound_mms",
+        "chart": {
+          "heading": "Blackbox Outbound MMS",
+          "controls": {
+            "shape": "bar",
+            "tooltipSuffix": "msg/s"
+          }
+        }
+      },
+      {
+        "query": "sum(messaging_blackbox_test_steps_failed{job=\"messaging-blackbox-test\", feature=\"Outbound MMS\"})",
+        "id": "messaging_blackbox_outbound_mms",
+        "chart": {
+          "heading": "Blackbox Outbound MMS",
+          "controls": {
+            "shape": "bar",
+            "tooltipSuffix": "msg/s"
+          }
+        }
+      },
+      {
+        "query": "sum(messaging_blackbox_test_steps_passed{job=\"messaging-blackbox-test\", feature=\"Outbound SMS\"})",
+        "id": "messaging_blackbox_outbound_sms",
+        "chart": {
+          "heading": "Blackbox Outbound SMS",
+          "controls": {
+            "shape": "bar",
+            "tooltipSuffix": "msg/s"
+          }
+        }
+      },
+      {
+        "query": "sum(messaging_blackbox_test_steps_failed{job=\"messaging-blackbox-test\", feature=\"Outbound SMS\"})",
+        "id": "messaging_blackbox_outbound_sms",
+        "chart": {
+          "heading": "Blackbox Outbound SMS",
+          "controls": {
+            "shape": "bar",
+            "tooltipSuffix": "msg/s"
+          }
+        }
+      },
+      {
+        "query": "sum(messaging_blackbox_test_steps_passed{job=\"messaging-blackbox-test\", feature=\"Two Factor Authentication\"})",
+        "id": "messaging_blackbox_two_factor_authentication",
+        "chart": {
+          "heading": "Blackbox Two Factor Authentication",
+          "controls": {
+            "shape": "bar",
+            "tooltipSuffix": "msg/s"
+          }
+        }
+      },
+      {
+        "query": "sum(messaging_blackbox_test_steps_failed{job=\"messaging-blackbox-test\", feature=\"Two Factor Authentication\"})",
+        "id": "messaging_blackbox_two_factor_authentication",
+        "chart": {
+          "heading": "Blackbox Two Factor Authentication",
+          "controls": {
+            "shape": "bar",
+            "tooltipSuffix": "msg/s"
+          }
+        }
+      }
+    ]
+  }
+}

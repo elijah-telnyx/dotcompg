@@ -1,0 +1,16 @@
+names:
+  service: telnyxdotcom-cache-monitor-oci
+  github: telnyxdotcom-monorepo
+
+build:
+  use_vault_ha: true
+  allow_vulnerable_image: true
+  promote_to_dev:
+    branch_pattern: "main|dev"
+
+project:
+  squad: dotcom.squad
+  primary_maintainer: lucas
+  secondary_maintainer: douglas
+  public_api: false
+  private_api: false

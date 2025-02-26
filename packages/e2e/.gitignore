@@ -1,0 +1,7 @@
+results/**/public/*
+results/**/reports/*
+!.gitkeep
+test-results/
+
+# local env files
+.env*.local

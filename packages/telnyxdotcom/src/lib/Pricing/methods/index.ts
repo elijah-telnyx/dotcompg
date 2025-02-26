@@ -1,0 +1,13 @@
+export { fetchMessagingPricing } from 'lib/Pricing/methods/messaging';
+export { fetchVideoApiPricing } from 'lib/Pricing/methods/videoApi';
+export { fetchFaxApiPricing } from 'lib/Pricing/methods/faxApi';
+export { fetchVerifyApiPricing } from 'lib/Pricing/methods/verifyApi';
+export { fetchNumberLookupPricing } from 'lib/Pricing/methods/numberLookup';
+export { fetchNumbersPricing } from 'lib/Pricing/methods/numbers';
+export { fetchVoicePricing } from 'lib/Pricing/methods/voice';
+export { fetchIOTSIMCardPricing } from 'lib/Pricing/methods/iotSimCard';
+export { fetchNetworkingPricing } from 'lib/Pricing/methods/networking';
+export { fetchStoragePricing } from 'lib/Pricing/methods/storage';
+export { fetchElasticSipPricing } from 'lib/Pricing/methods/elasticSip';
+export { fetchGlobalEdgeRouter } from 'lib/Pricing/methods/globalEdgeRouter';
+export { fetchInferenceApiPricing } from 'lib/Pricing/methods/inferenceApi';

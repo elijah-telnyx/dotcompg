@@ -1,0 +1,98 @@
+{
+  "env": "production",
+  "protocol": "https",
+  "host": "telnyx.com",
+  "revalidate": 3600,
+  "cache": {
+    "lifetime": 3600000,
+    "directory": ".cache"
+  },
+  "Analytics": {
+    "pagePrefix": "Telnyx.com Website - ",
+    "segment": {
+      "writeKey": "ZJF0glU6NoKycjhoQqez4gAkisp7igJx",
+      "warehouses": {
+        "analytics": "ogdZMAuRel",
+        "bigQuery": "o3VAxKv9qdfsfsrt5SV4cd"
+      }
+    },
+    "Clearbit": {
+      "ID": "pk_7dd8f4fe6d712d4ff454c4b7be6f6258"
+    },
+    "Optimize": {
+      "ID": "GTM-598W8C2"
+    },
+    "NEXT_PUBLIC_OPTIMIZE_ID": "GTM-598W8C2",
+    "NEXT_PUBLIC_GTM_TAG": "GTM-NRRX236"
+  },
+  "api": {
+    "BASE_URL": "https://api.telnyx.com",
+    "INVENTORY_TOOLS_BASE_URL": "http://inventory-tools.query.prod.telnyx.io:8080",
+    "BILLING_BASE_URL": "http://billing.query.prod.telnyx.io:8080/v2/public/unprotected/cost-codes",
+    "EXCHANGE_RATE_BASE_URL": "http://external-rates.query.prod.telnyx.io:8000/private/unprotected/v1/exchange_rates",
+    "NODE_FETCH_HOST_URL": "telnyx.com",
+    "MEDIA_STREAMING": "http://billing.query.prod.telnyx.io:8080/v2/private/unprotected/usage/media-streaming",
+    "WIRELESS_MANAGER_BASE_URL": "http://wireless-manager.query.prod.telnyx.io:4047",
+    "WIRELESS_ADMIN_BASE_URL": "http://wireless-admin.query.prod.telnyx.io:4000",
+    "CLOUD_STORAGE_BASE_URL": "https://telnyxstorage.com",
+    "DOMO_BASE_URL": "https://api.domo.com",
+    "CHATBOT_BASE_URL": "https://api.telnyx.com/v2/flow/execute/live/public_chatbots",
+    "VOICE_AI_BASE_URL": "https://api.telnyx.com/v2/texml/calls",
+    "VOICE_AI_SETUP_BASE_URL": "https://api.telnyx.com/v2/embeddings-voice-demo/contact-info"
+  },
+  "GOOGLE": {
+    "CLIENT_ID": "459741600459-4rsluhr9vebe92socurqhkpt8ckqhul1.apps.googleusercontent.com",
+    "sheets": {
+      "subpoenas": "1CTza0yTX8j6vx8ZXFk5qynnBpDrGQLxkCPJV4UA3uAk"
+    }
+  },
+  "PORTAL": {
+    "BASE_URL": "https://portal.telnyx.com/#"
+  },
+  "reCAPTCHA": {
+    "v2": {
+      "siteKey": "6LfoPnQUAAAAAEZ-g7mFd030AfSYnPOjn0QgF8Xh"
+    },
+    "v3": {
+      "siteKey": "6LdL85cUAAAAAM9edio5VxgCSOZF8SHtxBn69FAv"
+    }
+  },
+  "Intercom": {
+    "appId": "ltcafuzd",
+    "settings": {}
+  },
+  "WEBRTC": {
+    "TELNYX_API_BASE": "api.telnyx.com",
+    "ENDPOINT": "https://api.telnyx.com",
+    "SIP_CONNECTION_ID": "1583344836281370089",
+    "SIP_OB_NUMBER": "13122832353",
+    "CC_APP_ID": "1583347187281036874",
+    "WAITING_URL": "https://elasticbeanstalk-us-east-1-876150200888.s3.amazonaws.com/Night+Wolf.wav"
+  },
+  "CALL_US_WEBRTC": {
+    "HOST": "rtc.telnyx.com:14938",
+    "SIP_CONNECTION_ID": "1176753804461212887",
+    "CALL_DESTINATION": "",
+    "CALLER_NUMBER": "salesclick2call"
+  },
+  "SIFT_JS_KEY": "c0e19483c2",
+  "openReplay": {
+    "enabled": true,
+    "defaultInputMode": 0,
+    "obscureTextEmails": false,
+    "obscureTextNumbers": false,
+    "obscureInputEmails": false,
+    "obscureInputNumbers": false,
+    "obscureInputDates": false,
+    "projectKey": "UroG8ZaWjqB6m4W83Zvu",
+    "ingestPoint": "https://openreplay.telnyx.com/ingest"
+  },
+  "oneTrust": {
+    "enabled": true,
+    "NEXT_PUBLIC_API_KEY": "523bc78b-7e09-4618-b1a4-fd685c71f50e",
+    "automaticBlock": true
+  },
+  "wirelessAdmin": {
+    "version": "production"
+  }
+}

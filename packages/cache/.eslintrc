@@ -1,0 +1,23 @@
+{
+  "extends": ["plugin:@docusaurus/recommended"],
+  "plugins": ["@docusaurus"],
+  "rules": {
+    "@docusaurus/string-literal-i18n-messages": "error",
+    "@docusaurus/no-untranslated-text": "warn",
+    "@typescript-eslint/ban-ts-comment": "warn"
+  },
+  "ignorePatterns": [
+    "docusaurus.config.js",
+    "babel.config.js",
+    "ts.config.json",
+    "sidebars.js",
+    "sidebarsAPI.js",
+    "generateErrorsPages.js",
+    "generatePluginOpenapiDocsConfig.js",
+    "transformProductPagesAPIV1.js",
+    "server.js",
+    "build/",
+    "samples/",
+    "configs/"
+  ]
+}

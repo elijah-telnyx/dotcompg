@@ -1,0 +1,27 @@
+{
+  "env": "production",
+  "protocol": "https",
+  "host": "everroam.io",
+  "revalidate": 3600,
+  "cache": {
+    "lifetime": 3600000,
+    "directory": ".cache"
+  },
+  "api": {
+    "BASE_URL": "https://api.telnyx.com",
+    "NODE_FETCH_HOST_URL": "telnyx.com"
+  },
+  "PORTAL": {
+    "BASE_URL": "https://portal.telnyx.com/#"
+  },
+  "generatePagesFallback": {
+    "default": "blocking",
+    "blog": "blocking",
+    "no": false
+  },
+  "google": {
+    "sheets": {
+      "signup": "1xQ0i-xIZavyM030riLTb80krpQj5KwFVy-PGLYAkZ8Q"
+    }
+  }
+}

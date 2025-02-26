@@ -1,0 +1,13 @@
+{
+  "name": "telnyxdotcom-theme",
+  "version": "0.1.0",
+  "main": "./lib/design-tokens.json",
+  "description": "Theme for telnyx.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/team-telnyx/telnyxdotcom-monorepo.git",
+    "directory": "packages/theme"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

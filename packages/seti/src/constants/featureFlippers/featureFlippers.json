@@ -1,0 +1,7 @@
+{
+  "DOTCOM_3869_FACEHUGGER": {
+    "production": true,
+    "staging": true,
+    "dev": true
+  }
+}

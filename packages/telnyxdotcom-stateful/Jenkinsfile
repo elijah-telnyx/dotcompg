@@ -1,0 +1,56 @@
+@Library("github.com/team-telnyx/infra-ci-pipelines@latest") _
+dockerImage {
+  build_dir = "packages/telnyxdotcom-stateful"
+  build_on_changes_to_these_path_prefixes = [
+    ".nvmrc",
+    "package.json",
+    "package-lock.json",
+    "packages/ui",
+    "packages/theme",
+    "packages/telnyxdotcom"
+  ]
+  build_stage_targets = [ "build", "build-prod"]
+  image_additional_images = ["prod"]
+  service = "telnyxdotcom-stateful-oci"
+  channel = "#dotcom-jenkins"
+  vault_secrets = [
+    [
+      path: "dotcom-squad/telnyxdotcom-stateful",
+      secretValues: [
+        [vaultKey: "ANALYTICS_SEGMENT_WRITE_KEY"],
+        [vaultKey: "CONTENTFUL_ACCESS_TOKEN"],
+        [vaultKey: "CONTENTFUL_ACCESS_TOKEN_BLOG"],
+        [vaultKey: "CONTENTFUL_ACCESS_TOKEN_PREVIEW"],
+        [vaultKey: "CONTENTFUL_ACCESS_TOKEN_BLOG_PREVIEW"],
+        [vaultKey: "STRAPI_ACCESS_TOKEN"],
+        [vaultKey: "STRAPI_GITHUB_REPO_TOKEN"],
+        [vaultKey: "CONTENTFUL_MANAGEMENT_TOKEN_ASSETS"],
+        [vaultKey: "DOCUMENTS_API_KEY"],
+        [vaultKey: "DOMO_CLIENT_ID"],
+        [vaultKey: "DOMO_SECRET"],
+        [vaultKey: "AIRTABLE_TOKEN"],
+        [vaultKey: "NEUTRINO_SECRET_KEY"],
+        [vaultKey: "NEUTRINO_SECRET_USER_ID"],
+        [vaultKey: "RECAPTCHA_V3_SECRET"],
+        [vaultKey: "SENDGRID_API_KEY"],
+        [vaultKey: "SENDGRID_CONTACTS_API_KEY"],
+        [vaultKey: "CLOUDFLARE_API_KEY"],
+        [vaultKey: "PORTAL_API_V2_KEY"],
+        [vaultKey: "GOOGLE_SERVICE_ACCOUNT_EMAIL"],
+        [vaultKey: "GOOGLE_PRIVATE_KEY"],
+        [vaultKey: "PORTAL_CHATBOT_API_V2_KEY"],
+        [vaultKey: "PORTAL_VOICE_AI_API_V2_KEY"],
+        [vaultKey: "CLOUDFLARE_ZONE_ID"],
+        [vaultKey: "INTERCOM_SECRET_KEY"],
+        [vaultKey: "HCAPTCHA_SECRET_KEY"],
+        [vaultKey: "DISABLE_IN_MEMORY_CACHE"]
+      ]
+    ],
+    [
+      path: "dotcom-squad/telnyxdotcom-stateful-prod",
+      secretValues: [
+        [envVar: "PORTAL_API_V2_KEY_PROD", vaultKey: "PORTAL_API_V2_KEY"]
+      ]
+    ]
+  ]
+}

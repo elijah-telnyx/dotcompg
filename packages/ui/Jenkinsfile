@@ -1,0 +1,6 @@
+@Library("github.com/team-telnyx/infra-ci-pipelines@latest") _
+ciPipeline {
+  build_dir = "packages/ui"
+  service = 'telnyxdotcom-ui'
+  channel = "#dotcom-jenkins"
+}

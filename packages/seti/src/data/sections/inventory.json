@@ -1,0 +1,73 @@
+{
+  "number_ordering": {
+    "heading": "Status of Number Orders",
+    "copy": "End to end number ordering flow",
+    "code": "number_ordering",
+    "items": [
+      {
+        "query": "sum(increase(airflow_blackbox_inventory_success_count{collection_name=\"order_US_local_workflow\"}[11m])) >bool 0",
+        "id": "number_ordering_us",
+        "step": "60",
+        "chart": {
+          "heading": "US Orders",
+          "copy": "Success rate of US Orders Blackbox Tests",
+          "controls": {
+            "yAxis": {
+              "tick": false
+            },
+            "shape": "bar",
+            "mappings": [
+              {
+                "range": [0, 0],
+                "color": "red"
+              },
+              {
+                "range": [1, 1],
+                "color": "green"
+              }
+            ],
+            "shapeNames": ["Success Rate"],
+            "tooltipLabelPrefix": "time",
+            "stacked": true
+          }
+        }
+      }
+    ]
+  },
+  "e911_provisioning": {
+    "heading": "Status of E911 Related Provisioning",
+    "copy": "End to end e911 provisioning flow",
+    "code": "e911_provisioning",
+    "items": [
+      {
+        "query": "sum(increase(airflow_blackbox_inventory_success_count{collection_name=\"e911_provisioning\"}[11m])) >bool 0",
+        "id": "e911_provisioning_us",
+        "step": "60",
+        "percentage": true,
+        "chart": {
+          "heading": "US E911 Provisioning",
+          "copy": "Success rate of US E911 Provisioning Blackbox Tests",
+          "controls": {
+            "yAxis": {
+              "tick": false
+            },
+            "shape": "bar",
+            "mappings": [
+              {
+                "range": [0, 0],
+                "color": "red"
+              },
+              {
+                "range": [1, 1],
+                "color": "green"
+              }
+            ],
+            "shapeNames": ["Success Rate"],
+            "tooltipLabelPrefix": "time",
+            "stacked": true
+          }
+        }
+      }
+    ]
+  }
+}

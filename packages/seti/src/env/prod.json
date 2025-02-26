@@ -1,0 +1,22 @@
+{
+  "env": "production",
+  "protocol": "https",
+  "host": "seti.telnyx.com",
+  "api": {
+    "BASE_URL": "https://api.telnyx.com"
+  },
+  "PORTAL": {
+    "BASE_URL": "https://portal.telnyx.com/#"
+  },
+  "generatePagesFallback": {
+    "default": "blocking",
+    "no": false
+  },
+  "Analytics": {
+    "NEXT_PUBLIC_GTM_TAG": "GTM-NRRX236"
+  },
+  "oneTrust": {
+    "enabled": true,
+    "ID": "01949546-10ee-7bba-ac25-bd0f9be9bbcb"
+  }
+}

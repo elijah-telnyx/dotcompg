@@ -1,0 +1,58 @@
+# http://engineering-decision-records.query.dev.telnyx.io:35730/en/architecture/adr-0008.html
+names:
+  service: telnyxdotcom
+project:
+  squad: dotcom.squad
+  primary_maintainer: lucas
+  secondary_maintainer: douglas
+  public_api: false
+  private_api: false
+  dependencies: []
+build:
+  use_vault_ha: true
+deploy:
+  cpu: 250
+  memory: 800
+  cpu_limit: 500
+  memory_limit: 1600
+  ephemeral_storage_limit: 2
+  instances: 4
+  k8s_clusters: ['backend-ch1-prod', 'backend-dc2-prod']
+  secrets_from: file
+  service:
+    - name: telnyxdotcom
+      port: 3000
+      tags: ['frontend']
+      check:
+        path: /api/health
+      ready:
+        path: /api/ready
+
+# https://grafana.internal.telnyx.com/d/xU0f8p2Wz/kubernetes-services-metrics?orgId=1&var-Datasource=prometheus-prod&var-Service=telnyxdotcom
+# - min and max instances
+#   - help in the resource usage/waste
+#   - reliability of the application
+# - keep CPU request and limit based on normal spike
+#   - make sure autoscaling is triggered
+#   - avoid having the application in bad nodes (competing for resources)
+# - keep Average CPU for autoscaling at 50% usage based on CPU Limit
+#   - make sure autoscaling is triggered when necessary
+autoscaling:
+  minInstances: 4
+  maxInstances: 12
+  averageCpu: 50
+
+alerts:
+  # critical alerts
+  MinimumNumberOfInstances:
+    description: 'PROD Minimum number of instances - Telnyxdotcom'
+    destination: 'opsgenie'
+    prometheus_expression: "sum(consul_health_service_status{service_name='telnyxdotcom', status='passing'}) < 2"
+    prometheus_for: '2m'
+    resolution_document: 'https://app.getguru.com/card/ie46AKpT/Self-Service-MinimumNumberOfInstances'
+  MinimumNumberOfRegions:
+    description: 'PROD Minimum number of regions (2) - Telnyxdotcom'
+    destination: 'opsgenie'
+    prometheus_expression: "count(sum by (consul_datacenter) (consul_health_service_status{service_name='telnyxdotcom',status='passing'}) >= 1) < 2"
+    prometheus_for: '5m'
+    resolution_document: 'https://app.getguru.com/card/c9G64rAi/MinimumNumberOfRegions'

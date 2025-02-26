@@ -1,0 +1,179 @@
+{
+  "porting_blackbox": {
+    "heading": "Blackbox Testing",
+    "code": "porting_blackbox",
+    "ratio": true,
+    "items": [
+      {
+        "query": "((sum(increase(porting_black_box_scenarios_total{result=\"success\", scenario_id!~\"internal_port|fetch_subscription_versions\"}[10m])) OR on() vector(0)) / sum(increase(porting_black_box_scenarios_total{scenario_id!~\"internal_port|fetch_subscription_versions\"}[10m]))) * 100",
+        "id": "porting_global_success_rate_over_time",
+        "step": "60",
+        "chart": {
+          "heading": "Global",
+          "copy": "Global success rate of our porting blackbox tests.",
+          "controls": {
+            "yAxis": {
+              "unit": "%"
+            },
+            "shape": "bar",
+            "shapeNames": ["Success Rate", "Fail Rate"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      },
+      {
+        "query": "((sum(increase(porting_black_box_scenarios_total{result=\"fail\", scenario_id!~\"internal_port|fetch_subscription_versions\"}[10m])) OR on() vector(0)) / sum(increase(porting_black_box_scenarios_total{scenario_id!~\"internal_port|fetch_subscription_versions\"}[10m]))) * 100",
+        "id": "porting_global_success_rate_over_time",
+        "step": "60",
+        "chart": {
+          "heading": "Global",
+          "copy": "Global success rate of our porting blackbox tests.",
+          "controls": {
+            "yAxis": {
+              "unit": "%"
+            },
+            "shape": "bar",
+            "shapeNames": ["Success Rate", "Fail Rate"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      },
+      {
+        "query": "((sum(increase(porting_black_box_scenarios_total{result=\"success\", scenario_id=~\"post_porting_orders_fast_port_eligible|post_porting_orders_fast_port_mix|post_porting_orders_non_fast_port_eligible|post_porting_orders_us_and_ireland\"}[10m])) OR on() vector(0)) / sum(increase(porting_black_box_scenarios_total{scenario_id=~\"post_porting_orders_fast_port_eligible|post_porting_orders_fast_port_mix|post_porting_orders_non_fast_port_eligible|post_porting_orders_us_and_ireland\"}[10m]))) * 100",
+        "id": "porting_create_porting_orders_success_rate_over_time",
+        "step": "60",
+        "chart": {
+          "heading": "Create Porting Orders",
+          "copy": "Success rate of creating porting orders tests.",
+          "controls": {
+            "yAxis": {
+              "unit": "%"
+            },
+            "shape": "bar",
+            "shapeNames": ["Success Rate", "Fail Rate"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      },
+      {
+        "query": "((sum(increase(porting_black_box_scenarios_total{result=\"fail\", scenario_id=~\"post_porting_orders_fast_port_eligible|post_porting_orders_fast_port_mix|post_porting_orders_non_fast_port_eligible|post_porting_orders_us_and_ireland\"}[10m])) OR on() vector(0)) / sum(increase(porting_black_box_scenarios_total{scenario_id=~\"post_porting_orders_fast_port_eligible|post_porting_orders_fast_port_mix|post_porting_orders_non_fast_port_eligible|post_porting_orders_us_and_ireland\"}[10m]))) * 100",
+        "id": "porting_create_porting_orders_success_rate_over_time",
+        "step": "60",
+        "chart": {
+          "heading": "Create Porting Orders",
+          "copy": "Success rate of creating porting orders tests.",
+          "controls": {
+            "yAxis": {
+              "unit": "%"
+            },
+            "shape": "bar",
+            "shapeNames": ["Success Rate", "Fail Rate"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      },
+      {
+        "query": "((sum(increase(porting_black_box_scenarios_total{result=\"success\", scenario_id=\"update_porting_orders_with_valid_params\"}[10m])) OR on() vector(0)) / sum(increase(porting_black_box_scenarios_total{scenario_id=\"update_porting_orders_with_valid_params\"}[10m]))) * 100",
+        "id": "porting_update_porting_orders_success_rate_over_time",
+        "step": "60",
+        "chart": {
+          "heading": "Update Porting Orders",
+          "copy": "Success rate of updating porting orders tests.",
+          "controls": {
+            "yAxis": {
+              "unit": "%"
+            },
+            "shape": "bar",
+            "shapeNames": ["Success Rate", "Fail Rate"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      },
+      {
+        "query": "((sum(increase(porting_black_box_scenarios_total{result=\"fail\", scenario_id=\"update_porting_orders_with_valid_params\"}[10m])) OR on() vector(0)) / sum(increase(porting_black_box_scenarios_total{scenario_id=\"update_porting_orders_with_valid_params\"}[10m]))) * 100",
+        "id": "porting_update_porting_orders_success_rate_over_time",
+        "step": "60",
+        "chart": {
+          "heading": "Update Porting Orders",
+          "copy": "Success rate of updating porting orders tests.",
+          "controls": {
+            "yAxis": {
+              "unit": "%"
+            },
+            "shape": "bar",
+            "shapeNames": ["Success Rate", "Fail Rate"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      },
+      {
+        "query": "((sum(increase(porting_black_box_scenarios_total{result=\"success\", scenario_id=~\"create_document_from_base64|create_document_from_url\"}[10m])) OR on() vector(0)) / sum(increase(porting_black_box_scenarios_total{scenario_id=~\"create_document_from_base64|create_document_from_url\"}[10m]))) * 100",
+        "id": "porting_create_documents_success_rate_over_time",
+        "step": "60",
+        "chart": {
+          "heading": "Create Documents",
+          "copy": "Success rate of creating documents tests.",
+          "controls": {
+            "yAxis": {
+              "unit": "%"
+            },
+            "shape": "bar",
+            "shapeNames": ["Success Rate", "Fail Rate"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      },
+      {
+        "query": "((sum(increase(porting_black_box_scenarios_total{result=\"fail\", scenario_id=~\"create_document_from_base64|create_document_from_url\"}[10m])) OR on() vector(0)) / sum(increase(porting_black_box_scenarios_total{scenario_id=~\"create_document_from_base64|create_document_from_url\"}[10m]))) * 100",
+        "id": "porting_create_documents_success_rate_over_time",
+        "step": "60",
+        "chart": {
+          "heading": "Create Documents",
+          "copy": "Success rate of creating documents tests.",
+          "controls": {
+            "yAxis": {
+              "unit": "%"
+            },
+            "shape": "bar",
+            "shapeNames": ["Success Rate", "Fail Rate"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      },
+      {
+        "query": "((sum(increase(porting_black_box_scenarios_total{result=\"success\", scenario_id=~\"list_requirements|list_requirement_types\"}[10m])) OR on() vector(0)) / sum(increase(porting_black_box_scenarios_total{scenario_id=~\"list_requirements|list_requirement_types\"}[10m]))) * 100",
+        "id": "porting_list_requirements_success_rate_over_time",
+        "step": "60",
+        "chart": {
+          "heading": "List Requirements",
+          "copy": "Success rate of listing requirements tests.",
+          "controls": {
+            "yAxis": {
+              "unit": "%"
+            },
+            "shape": "bar",
+            "shapeNames": ["Success Rate", "Fail Rate"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      },
+      {
+        "query": "((sum(increase(porting_black_box_scenarios_total{result=\"fail\", scenario_id=~\"list_requirements|list_requirement_types\"}[10m])) OR on() vector(0)) / sum(increase(porting_black_box_scenarios_total{scenario_id=~\"list_requirements|list_requirement_types\"}[10m]))) * 100",
+        "id": "porting_list_requirements_success_rate_over_time",
+        "step": "60",
+        "chart": {
+          "heading": "List Requirements",
+          "copy": "Success rate of listing requirements tests.",
+          "controls": {
+            "yAxis": {
+              "unit": "%"
+            },
+            "shape": "bar",
+            "shapeNames": ["Success Rate", "Fail Rate"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      }
+    ]
+  }
+}

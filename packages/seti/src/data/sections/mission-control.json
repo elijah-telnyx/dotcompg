@@ -1,0 +1,240 @@
+{
+  "mission_control_percentage": {
+    "heading": "Mission Control API - Black Box Tests",
+    "code": "mission_control_percentage",
+    "items": [
+      {
+        "query": "avg(avg_over_time(runscope_assertion_success_ratio{test_name = \"[CRITICAL] MCP Bulk Operations Endpoint - Multi Location\"}[5m]))",
+        "id": "mission_control_percentage_bulk_ops",
+        "grid": {
+          "xs": 4,
+          "small": 2,
+          "medium": 4
+        },
+        "step": "60",
+        "stat": "avg",
+        "chart": {
+          "heading": "Bulk Operations",
+          "size": "small",
+          "controls": {
+            "shape": "absolute",
+            "suffix": "%",
+            "mappings": [
+              {
+                "range": [0.95, 1],
+                "color": "green"
+              },
+              {
+                "range": [0.9, 0.9499],
+                "color": "citron"
+              },
+              {
+                "range": [0, 0.8999],
+                "color": "red"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "query": "avg(avg_over_time(runscope_assertion_success_ratio{test_name = \"[CRITICAL] MCP Connection Endpoint - Multi Location\"}[5m]))",
+        "id": "mission_control_percentage_connection_updates",
+        "grid": {
+          "xs": 4,
+          "small": 2,
+          "medium": 4
+        },
+        "step": "60",
+        "stat": "avg",
+        "chart": {
+          "heading": "Connections",
+          "size": "small",
+          "controls": {
+            "shape": "absolute",
+            "suffix": "%",
+            "mappings": [
+              {
+                "range": [0.95, 1],
+                "color": "green"
+              },
+              {
+                "range": [0.9, 0.9499],
+                "color": "citron"
+              },
+              {
+                "range": [0, 0.8999],
+                "color": "red"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "query": "avg(avg_over_time(runscope_assertion_success_ratio{test_name = \"[CRITICAL] MCP Sessions endpoints - Multi Location\"}[5m]))",
+        "id": "mission_control_percentage_sessions",
+        "grid": {
+          "xs": 4,
+          "small": 2,
+          "medium": 4
+        },
+        "step": "60",
+        "stat": "avg",
+        "chart": {
+          "heading": "Portal Login",
+          "size": "small",
+          "controls": {
+            "shape": "absolute",
+            "suffix": "%",
+            "mappings": [
+              {
+                "range": [0.95, 1],
+                "color": "green"
+              },
+              {
+                "range": [0.9, 0.9499],
+                "color": "citron"
+              },
+              {
+                "range": [0, 0.8999],
+                "color": "red"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "mission_control_over_time": {
+    "heading": "BlackBox Over time charts",
+    "code": "mission_control_over_time",
+    "items": [
+      {
+        "query": "avg(runscope_assertion_success_ratio{test_name = \"[CRITICAL] MCP Bulk Operations Endpoint - Multi Location\"}) by (test_name) * 100",
+        "id": "mission_control_over_time_critical_bulk",
+        "step": "300",
+        "chart": {
+          "heading": "Bulk Operations Endpoint",
+          "copy": "Percentage of successful BB tests",
+          "controls": {
+            "yAxis": {
+              "unit": "%"
+            },
+            "shape": "bar",
+            "shapeNames": ["Success Rate"],
+            "tooltipLabelPrefix": "time",
+            "tooltipSuffix": "%"
+          }
+        },
+        "grid": {
+          "xs": 4,
+          "small": 8,
+          "medium": 4
+        }
+      },
+      {
+        "query": "avg(runscope_assertion_success_ratio{test_name = \"[CRITICAL] MCP Connection Endpoint - Multi Location\"}) by (test_name) * 100",
+        "id": "mission_control_over_time_critical_connection",
+        "step": "300",
+        "chart": {
+          "heading": "Connections Endpoint",
+          "copy": "Percentage of successful BB tests",
+          "controls": {
+            "yAxis": {
+              "unit": "%"
+            },
+            "shape": "bar",
+            "shapeNames": ["Success Rate"],
+            "tooltipLabelPrefix": "time",
+            "tooltipSuffix": "%"
+          }
+        },
+        "grid": {
+          "xs": 4,
+          "small": 8,
+          "medium": 4
+        }
+      },
+      {
+        "query": "avg(runscope_assertion_success_ratio{test_name = \"[CRITICAL] MCP Sessions endpoints - Multi Location\"}) by (test_name) * 100",
+        "id": "mission_control_over_time_critical_login",
+        "step": "300",
+        "chart": {
+          "heading": "Portal Login Endpoint",
+          "copy": "Percentage of successful BB tests",
+          "controls": {
+            "yAxis": {
+              "unit": "%"
+            },
+            "shape": "bar",
+            "shapeNames": ["Success Rate"],
+            "tooltipLabelPrefix": "time",
+            "tooltipSuffix": "%"
+          }
+        },
+        "grid": {
+          "xs": 4,
+          "small": 8,
+          "medium": 4
+        }
+      }
+    ]
+  },
+  "mission_control_live": {
+    "heading": "Mission Control API - Live Metrics",
+    "code": "mission_control_live",
+    "items": [
+      {
+        "query": "histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket{app=\"api\", method=\"GET\"}[15m])) by (le)) * 1000",
+        "id": "mission_control_live_response_time",
+        "grid": {
+          "xs": 4,
+          "small": 8,
+          "medium": 6
+        },
+        "step": "30",
+        "chart": {
+          "heading": "ALL Portal API Endpoints - Global Response Time",
+          "copy": "95th percentile response time, measured in milliseconds.",
+          "controls": {
+            "shape": "bar",
+            "shapeNames": ["Response time (ms)"],
+            "tooltipLabelPrefix": "time"
+          }
+        }
+      },
+      {
+        "query": "(sum(rate(http_request_duration_seconds_count{app=\"api\", http_status=\"5XX\"}[5m])) / sum(rate(http_request_duration_seconds_count{app=\"api\"}[5m]))) or vector(0)",
+        "id": "mission_control_live_5xx_count",
+        "grid": {
+          "xs": 2,
+          "small": 2,
+          "medium": 2
+        },
+        "step": "60",
+        "stat": "last",
+        "chart": {
+          "heading": "Global 5XX Error Rate",
+          "size": "xs",
+          "controls": {
+            "shape": "absolute",
+            "suffix": "%",
+            "mappings": [
+              {
+                "range": [0.1499, 1],
+                "color": "red"
+              },
+              {
+                "range": [0.0999, 0.1499],
+                "color": "citron"
+              },
+              {
+                "range": [0, 0.0999],
+                "color": "green"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

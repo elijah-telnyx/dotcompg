@@ -1,0 +1,37 @@
+names:
+  service: telnyxdotcom-e2e
+  github: telnyxdotcom-monorepo
+
+build:
+  use_vault_ha: true
+  allow_vulnerable_image: true
+
+project:
+  squad: dotcom.squad
+  primary_maintainer: lucas
+  secondary_maintainer: douglas
+  public_api: false
+  private_api: false
+
+deploy:
+  secrets_from: file
+  k8s_clusters: ['backend-ch1-dev']
+  service:
+    - name: telnyxdotcom-e2e
+      port: 4029
+      tags: ['frontend', 'website', 'docs', 'metrics']
+  cpu: 10
+  memory: 110
+  cpu_limit: 60
+  memory_limit: 170
+  instances: 1
+
+alerts:
+  # alerts destination default to slack for DEV
+  MinimumNumberOfInstances:
+    description: 'Minimum number of instances - telnyxdotcom-e2e'
+    destination: 'slack'
+    prometheus_expression: "sum(consul_health_service_status{service_name='telnyxdotcom-e2e', status='passing'}) < 1"
+    prometheus_for: '10m'
+    resolution_document: 'https://app.getguru.com/card/ie46AKpT/Self-Service-MinimumNumberOfInstances'
+    channel: '#dotcom-alerts'

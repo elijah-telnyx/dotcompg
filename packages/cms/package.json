@@ -1,0 +1,25 @@
+{
+  "name": "cms",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@telnyxdotcom/eslint-config": "^1.0.0",
+    "@types/node": "20.6.0",
+    "@types/react": "18.2.73",
+    "@types/react-dom": "18.2.15",
+    "contentful": "^10.5.2",
+    "contentful-management": "^10.45.1",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.4.19",
+    "next": "13.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.2.2"
+  }
+}

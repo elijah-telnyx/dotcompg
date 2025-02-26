@@ -1,0 +1,30 @@
+{
+  "description": "telnyx.com monorepo. Goal is to have e2e tests, a dedicated storybook and codebase in here",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "bootstrap": "npm install --frozen-lockfile --non-interactive --production=false",
+    "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
+    "build:telnyxdotcom": "npm run build --workspace=telnyxdotcom",
+    "dev:telnyxdotcom": "npm run dev --workspace=telnyxdotcom",
+    "start:telnyxdotcom": "npm run start --workspace=telnyxdotcom",
+    "lint:telnyxdotcom": "npm run lint --workspace=telnyxdotcom",
+    "test:telnyxdotcom": "npm run test --workspace=telnyxdotcom",
+    "dev:storybook": "npm run dev --workspace=telnyxdotcom-ui",
+    "lint:ui": "npm run lint --workspace=telnyxdotcom-ui",
+    "test:ui": "npm run test --workspace=telnyxdotcom-ui",
+    "build:everroam": "npm run build --workspace=everroam",
+    "dev:everroam": "npm run dev --workspace=everroam",
+    "start:everroam": "npm run start --workspace=everroam",
+    "build:seti": "npm run build --workspace=seti",
+    "dev:seti": "npm run dev --workspace=seti",
+    "start:seti": "npm run start --workspace=seti",
+    "lint:seti": "npm run lint --workspace=seti",
+    "test:seti": "npm run test --workspace=seti",
+    "changes:telnyxdotcom": "./changes-since-last-deploy.sh telnyxdotcom-stateful telnyxdotcom",
+    "changes:seti": "./changes-since-last-deploy.sh seti seti"
+  },
+  "workspaces": [
+    "packages/!(e2e|cache)"
+  ]
+}

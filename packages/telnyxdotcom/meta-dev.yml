@@ -1,0 +1,45 @@
+# http://engineering-decision-records.query.dev.telnyx.io:35730/en/architecture/adr-0008.html
+names:
+  service: telnyxdotcom
+  github: telnyxdotcom-monorepo
+  bugsnag: telnyxdotcom
+project:
+  squad: dotcom.squad
+  primary_maintainer: lucas
+  secondary_maintainer: douglas
+  public_api: false
+  private_api: false
+  dependencies: []
+build:
+  allow_vulnerable_image: true
+  use_vault_ha: true
+deploy:
+  instances: 2
+  cpu: 25
+  memory: 130
+  cpu_limit: 320
+  memory_limit: 280
+  k8s_clusters: ["backend-ch1-dev", "gce-backend-dc2-dev"]
+  secrets_from: file
+  service:
+    - name: telnyxdotcom
+      port: 3000
+      tags: ['frontend']
+      check:
+        path: /api/health
+      ready:
+        type: http
+        method: GET
+        path: /api/ready
+        interval: 15s
+        timeout: 20s
+        success_threshold: 1
+alerts:
+  # alerts destination default to slack for DEV
+  MinimumNumberOfInstances:
+    description: 'DEV Minimum number of instances - Telnyxdotcom'
+    destination: 'slack'
+    prometheus_expression: "sum(consul_health_service_status{service_name='telnyxdotcom', status='passing'}) < 2"
+    prometheus_for: '10m'
+    resolution_document: 'https://app.getguru.com/card/ie46AKpT/Self-Service-MinimumNumberOfInstances'
+    channel: '#dotcom-alerts-dev'

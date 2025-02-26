@@ -1,0 +1,14 @@
+# http://engineering-decision-records.query.dev.telnyx.io:35730/en/architecture/adr-0008.html
+names:
+  service: telnyxdotcom-stateful-oci
+  github: telnyxdotcom-monorepo
+  bugsnag: telnyxdotcom-stateful
+project:
+  squad: dotcom.squad
+  primary_maintainer: lucas
+  secondary_maintainer: douglas
+  public_api: false
+  private_api: false
+build:
+  allow_vulnerable_image: true
+  use_vault_ha: true

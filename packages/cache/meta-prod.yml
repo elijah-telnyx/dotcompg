@@ -1,0 +1,12 @@
+deploy:
+  secrets_from: file
+  k8s_clusters: ["backend-ch1-prod"]
+  service:
+    - name: "telnyxdotcom-cache-monitor-oci"
+      port: 4029
+      tags: ["frontend", "website", "docs", "metrics"]
+  cpu: 10
+  memory: 110
+  cpu_limit: 60
+  memory_limit: 170
+  instances: 1
