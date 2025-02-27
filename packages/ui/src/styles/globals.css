@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .media-wrapper {
+    @apply relative w-full h-full;
+  }
+  
+  .media-content {
+    @apply w-full h-full object-cover;
+  }
+  
+  .media-overlay {
+    @apply absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300;
+  }
+  
+  .media-wrapper:hover .media-overlay {
+    @apply opacity-100;
+  }
+  
+  .media-controls {
+    @apply absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent;
+  }
+}
